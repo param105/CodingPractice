@@ -15,7 +15,7 @@ public class MainClass {
     }
 
     private void startAddingTestJobs(){
-        //Lets add some jobs in the jobsObservable class following thread will add new jobs after few seconds
+        //Lets add some jobs in the observable class following thread will add new jobs after few seconds
 
         new Thread(() -> {
             for (int i = 0; i < testJobs.length; i++) {
