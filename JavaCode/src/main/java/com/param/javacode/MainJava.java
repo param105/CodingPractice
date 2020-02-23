@@ -1,7 +1,6 @@
 package com.param.javacode;
 
-import com.param.javacode.designpatterns.Employee;
-import com.param.javacode.designpatterns.SingletonClass;
+import com.param.javacode.designpatterns.singleton.SingletonClass;
 
 public class MainJava {
 

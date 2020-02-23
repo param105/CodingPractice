@@ -1,4 +1,4 @@
-package com.param.javacode.designpatterns;
+package com.param.javacode.designpatterns.builder;
 
 /***
  * Class to demonstrate builder pattern
