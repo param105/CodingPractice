@@ -10,7 +10,7 @@ package com.param.javacode.designpatterns.builder;
  *                 .setHeight("165")
  *                 .build();
  */
-public class Employee {
+class Employee {
 
     private String firstName;
     private String middlename;
@@ -21,9 +21,9 @@ public class Employee {
     private String height;
     private String weight;
 
-    public Employee(String firstName, String middlename,
-                    String lastName, String age, String fatherName,
-                    String motherName, String height, String weight) {
+    private Employee(String firstName, String middlename,
+                     String lastName, String age, String fatherName,
+                     String motherName, String height, String weight) {
         this.firstName = firstName;
         this.middlename = middlename;
         this.lastName = lastName;
