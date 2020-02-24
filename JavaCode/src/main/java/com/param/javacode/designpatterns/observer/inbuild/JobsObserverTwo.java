@@ -8,7 +8,7 @@ public class JobsObserverTwo implements Observer {
     String[] jobs;
 
 
-    public JobsObserverTwo(Observable observable) {
+    JobsObserverTwo(Observable observable) {
         this.observable = observable;
         observable.addObserver(this);
     }
@@ -16,8 +16,8 @@ public class JobsObserverTwo implements Observer {
     private void displayAllJobs(Object o) {
         jobs = ((JobsObservable)observable).getJobsArrayList().toArray(new String[0]);
         System.out.println("######### Updated Job List received in observer TWO ######");
-        for (int i = 0; i < jobs.length; i++) {
-            System.out.print(jobs[i] +",");
+        for (String job : jobs) {
+            System.out.print(job + ",");
         }
         System.out.println();
     }

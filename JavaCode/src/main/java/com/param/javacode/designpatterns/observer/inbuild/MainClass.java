@@ -15,12 +15,13 @@ public class MainClass {
     }
 
     private void startAddingTestJobs(){
-        //Lets add some jobs in the observable class following thread will add new jobs after few seconds
+        //Lets add some jobs in the observable class.
+        // following thread will add new jobs after some delay
 
         new Thread(() -> {
-            for (int i = 0; i < testJobs.length; i++) {
+            for (String testJob : testJobs) {
 
-                jobsObservable.addnewJob(testJobs[i]);
+                jobsObservable.addnewJob(testJob);
                 try {
                     Thread.sleep(3000);
                 } catch (InterruptedException e) {
