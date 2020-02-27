@@ -17,5 +17,12 @@
         <action
             android:id="@+id/action_mainListFragment_to_serviceDemoFragment"
             app:destination="@id/serviceDemoFragment" />
+        <action
+            android:id="@+id/action_mainListFragment_to_intentServiceDemoFragment"
+            app:destination="@id/intentServiceDemoFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/intentServiceDemoFragment"
+        android:name="com.param.codingpractice.servicedemo.IntentServiceDemoFragment"
+        android:label="IntentServiceDemoFragment" />
 </navigation>

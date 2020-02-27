@@ -9,6 +9,16 @@ import java.lang.Exception
 import java.text.SimpleDateFormat
 import java.util.*
 
+/***
+ * simple service which has binding capabilities.
+ * 1) When you start service by startService() method then it has to be stooped by stopSelf() or StopService()
+ * 2) NOt started by startService() but service created with bound bindService() method
+ *    then you have to unBind() it then only it will get destroyed
+ * 3) started -> stopped // its valid
+ * 4) started -> onBind() -> stopped // it not stop as it is now bounded
+ * 5) started -> onBind() -> onUnbind() -> Stopeed() // it will destroy service
+ * 5) bind -> unbind // will destroy service in this case also.
+ */
 class SimpleService : Service() {
 
     @Volatile
@@ -52,6 +62,7 @@ class SimpleService : Service() {
                     Log.d(TAG, "Service Random - $serviceRandom")
                 }
             }
+            stopSelf()
         })
         serviceThread.start()
     }

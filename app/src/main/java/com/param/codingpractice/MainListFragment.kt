@@ -32,7 +32,7 @@ class MainListFragment : Fragment()  {
 
                 when(item?.id){
                     "0" -> findNavController().navigate(R.id.action_mainListFragment_to_serviceDemoFragment)
-                    "1" -> findNavController().navigate(R.id.action_mainListFragment_to_serviceDemoFragment)
+                    "1" -> findNavController().navigate(R.id.action_mainListFragment_to_intentServiceDemoFragment)
                     "2" -> findNavController().navigate(R.id.action_mainListFragment_to_serviceDemoFragment)
                 }
             }

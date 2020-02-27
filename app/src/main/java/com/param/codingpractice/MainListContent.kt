@@ -13,8 +13,7 @@ object MainListContent {
 
 
    var listLables  = arrayOf("Simple Service",
-   "Bound Service",
-   "Intent Service")
+   "Simple Intent Service")
     /**
      * An array of sample (dummy) items.
      */
