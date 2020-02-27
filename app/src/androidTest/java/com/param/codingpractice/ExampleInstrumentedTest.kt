@@ -1,4 +1,4 @@
-package com.param.myapplication
+package com.param.codingpractice
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

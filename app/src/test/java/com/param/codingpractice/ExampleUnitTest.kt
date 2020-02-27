@@ -1,4 +1,4 @@
-package com.param.myapplication
+package com.param.codingpractice
 
 import org.junit.Test
 
