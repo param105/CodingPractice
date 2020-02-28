@@ -12,8 +12,7 @@ import java.util.HashMap
 object MainListContent {
 
 
-   var listLables  = arrayOf("Simple Service",
-   "Simple Intent Service")
+   var listLables  = arrayOf("Simple Service", "Simple Intent Service", "Messenger Service")
     /**
      * An array of sample (dummy) items.
      */

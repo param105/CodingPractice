@@ -37,8 +37,15 @@ class SimpleService : Service() {
 
     override fun onUnbind(intent: Intent?): Boolean {
         Log.d(TAG,"Service onUnbind..")
-        return super.onUnbind(intent)
+        super.onUnbind(intent)
+        return true
     }
+
+    override fun onRebind(intent: Intent?) {
+        super.onRebind(intent)
+        Log.d(TAG,"Service Rebind..")
+    }
+
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
          super.onStartCommand(intent, flags, startId)

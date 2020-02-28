@@ -20,9 +20,16 @@
         <action
             android:id="@+id/action_mainListFragment_to_intentServiceDemoFragment"
             app:destination="@id/intentServiceDemoFragment" />
+        <action
+            android:id="@+id/action_mainListFragment_to_messengerServiceFragment"
+            app:destination="@id/messengerServiceFragment" />
     </fragment>
     <fragment
         android:id="@+id/intentServiceDemoFragment"
         android:name="com.param.codingpractice.servicedemo.IntentServiceDemoFragment"
         android:label="IntentServiceDemoFragment" />
+    <fragment
+        android:id="@+id/messengerServiceFragment"
+        android:name="com.param.codingpractice.servicedemo.MessengerServiceFragment"
+        android:label="MessengerServiceFragment" />
 </navigation>

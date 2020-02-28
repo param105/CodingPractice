@@ -91,6 +91,12 @@ class SimpleIntentService : IntentService("SimpleIntentService") {
         Log.d(TAG,"Intent service destroyed..")
     }
 
+    override fun onUnbind(intent: Intent?): Boolean {
+         super.onUnbind(intent)
+        Log.d(TAG,"Intent service onUnbind..")
+        return true
+    }
+
     override fun onRebind(intent: Intent?) {
         super.onRebind(intent)
         Log.d(TAG,"Intent service onRebind..")

@@ -13,14 +13,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <service
-            android:name="com.param.codingpractice.servicedemo.services.SimpleIntentService"
-            android:exported="false"></service>
+            android:name=".servicedemo.services.MessengerService"
+            android:enabled="true"
+            android:exported="true"></service>
         <service
-            android:name="com.param.codingpractice.servicedemo.services.SimpleService"
+            android:name=".servicedemo.services.SimpleIntentService"
+            android:exported="false" />
+        <service
+            android:name=".servicedemo.services.SimpleService"
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name="com.param.codingpractice.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
