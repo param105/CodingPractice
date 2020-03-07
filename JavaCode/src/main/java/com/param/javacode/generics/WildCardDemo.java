@@ -1,6 +1,6 @@
 package com.param.javacode.generics;
 
-public class WildCardTest {
+public class WildCardDemo {
 
     public static void main(String[] args) {
 
@@ -12,17 +12,17 @@ public class WildCardTest {
         Coordinates<ThreeD> threeDCoordinates = new Coordinates<>(threeDs);
         Coordinates<FourD> fourDCoordinates = new Coordinates<>(fourDs);
 
-        WildCardTest.showXY(twoDCoordinates);
-        WildCardTest.showXY(threeDCoordinates);
-        WildCardTest.showXY(fourDCoordinates);
+        WildCardDemo.showXY(twoDCoordinates);
+        WildCardDemo.showXY(threeDCoordinates);
+        WildCardDemo.showXY(fourDCoordinates);
 
         //WildCardTest.showXYZ(twoDCordinates); // Compile time error
-        WildCardTest.showXYZ(threeDCoordinates);
-        WildCardTest.showXYZ(fourDCoordinates);
+        WildCardDemo.showXYZ(threeDCoordinates);
+        WildCardDemo.showXYZ(fourDCoordinates);
 
         //WildCardTest.showAll(twoDCordinates); //// Compile time error
         //WildCardTest.showAll(threeDCordinates); //// Compile time error
-        WildCardTest.showAll(fourDCoordinates);
+        WildCardDemo.showAll(fourDCoordinates);
 
     }
 
