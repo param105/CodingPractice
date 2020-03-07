@@ -8,39 +8,39 @@ public class WildCardTest {
         ThreeD threeDs[] = {new ThreeD(3,3,3),new ThreeD(33,33,33)};
         FourD fourDs[] = {new FourD(4,4,4,4),new FourD(44,44,44,44)};
 
-        Cordinates<TwoD> twoDCordinates = new Cordinates<>(twoDs);
-        Cordinates<ThreeD> threeDCordinates = new Cordinates<>(threeDs);
-        Cordinates<FourD> fourDCordinates = new Cordinates<>(fourDs);
+        Coordinates<TwoD> twoDCoordinates = new Coordinates<>(twoDs);
+        Coordinates<ThreeD> threeDCoordinates = new Coordinates<>(threeDs);
+        Coordinates<FourD> fourDCoordinates = new Coordinates<>(fourDs);
 
-        WildCardTest.showXY(twoDCordinates);
-        WildCardTest.showXY(threeDCordinates);
-        WildCardTest.showXY(fourDCordinates);
+        WildCardTest.showXY(twoDCoordinates);
+        WildCardTest.showXY(threeDCoordinates);
+        WildCardTest.showXY(fourDCoordinates);
 
         //WildCardTest.showXYZ(twoDCordinates); // Compile time error
-        WildCardTest.showXYZ(threeDCordinates);
-        WildCardTest.showXYZ(fourDCordinates);
+        WildCardTest.showXYZ(threeDCoordinates);
+        WildCardTest.showXYZ(fourDCoordinates);
 
         //WildCardTest.showAll(twoDCordinates); //// Compile time error
         //WildCardTest.showAll(threeDCordinates); //// Compile time error
-        WildCardTest.showAll(fourDCordinates);
+        WildCardTest.showAll(fourDCoordinates);
 
     }
 
-    static void showXY(Cordinates<?> c){
+    static void showXY(Coordinates<?> c){
         System.out.println("X Y Coordinates:");
         for (int i = 0; i < c.cords.length ; i++) {
             System.out.println(c.cords[i].x + ", " + c.cords[i].y);
         }
     }
 
-    static void showXYZ(Cordinates<? extends ThreeD> c){
+    static void showXYZ(Coordinates<? extends ThreeD> c){
         System.out.println("X Y Coordinates:");
         for (int i = 0; i < c.cords.length ; i++) {
             System.out.println(c.cords[i].x + ", " + c.cords[i].y +", "+ c.cords[i].z);
         }
     }
 
-    static void showAll(Cordinates<? extends FourD> c){
+    static void showAll(Coordinates<? extends FourD> c){
         System.out.println("X Y Coordinates:");
         for (int i = 0; i < c.cords.length ; i++) {
             System.out.println(c.cords[i].x + ", " + c.cords[i].y + ", "+ c.cords[i].z +", "+ c.cords[i].t);
@@ -86,9 +86,9 @@ class FourD extends ThreeD{
  * Bounded wildcard coordinates class
  * @param <T>
  */
-class Cordinates<T extends TwoD>{
+class Coordinates<T extends TwoD>{
     T[] cords;
-    Cordinates(T[] array){
+    Coordinates(T[] array){
         cords = array;
     }
 }
