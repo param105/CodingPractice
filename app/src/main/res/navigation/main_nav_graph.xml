@@ -23,6 +23,9 @@
         <action
             android:id="@+id/action_mainListFragment_to_messengerServiceFragment"
             app:destination="@id/messengerServiceFragment" />
+        <action
+            android:id="@+id/action_mainListFragment_to_notificationDemoFragment"
+            app:destination="@id/notificationDemoFragment" />
     </fragment>
     <fragment
         android:id="@+id/intentServiceDemoFragment"
@@ -32,4 +35,8 @@
         android:id="@+id/messengerServiceFragment"
         android:name="com.param.codingpractice.servicedemo.MessengerServiceFragment"
         android:label="MessengerServiceFragment" />
+    <fragment
+        android:id="@+id/notificationDemoFragment"
+        android:name="com.param.codingpractice.notification.NotificationDemoFragment"
+        android:label="NotificationDemoFragment" />
 </navigation>
