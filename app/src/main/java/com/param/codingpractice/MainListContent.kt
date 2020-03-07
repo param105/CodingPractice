@@ -7,12 +7,12 @@ import java.util.HashMap
  * Helper class for providing sample content for user interfaces created by
  * Android template wizards.
  *
- * TODO: Replace all uses of this class before publishing your app.
+ *
  */
 object MainListContent {
 
 
-   var listLables  = arrayOf("Simple Service", "Simple Intent Service", "Messenger Service")
+   private var listLabels  = arrayOf("Simple Service", "Simple Intent Service", "Messenger Service")
     /**
      * An array of sample (dummy) items.
      */
@@ -21,13 +21,13 @@ object MainListContent {
     /**
      * A map of sample (dummy) items, by ID.
      */
-    val ITEM_MAP: MutableMap<String, MainListItem> = HashMap()
+    private val ITEM_MAP: MutableMap<String, MainListItem> = HashMap()
 
-    private val COUNT = listLables.count()
+    private val COUNT = listLabels.count()
 
     init {
 
-        for (i in 0..COUNT -1) {
+        for (i in 0 until COUNT) {
             addItem(
                 createDummyItem(
                     i
@@ -44,15 +44,15 @@ object MainListContent {
     private fun createDummyItem(position: Int): MainListItem {
         return MainListItem(
             position.toString(),
-            listLables[position],
+            listLabels[position],
             makeDetails(position)
         )
     }
 
     private fun makeDetails(position: Int): String {
         val builder = StringBuilder()
-        builder.append("Details about Item: ").append(listLables[position])
-        for (i in 0..position - 1) {
+        builder.append("Details about Item: ").append(listLabels[position])
+        for (i in 0 until position) {
             builder.append("\nMore details information here.")
         }
         return builder.toString()

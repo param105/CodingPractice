@@ -22,7 +22,7 @@ class MessengerService : Service() {
         Log.d(TAG, "MessengerService onCreate")
         messanger = Messenger(MessageHandler(this))
         mChronometer = Chronometer(this);
-        mChronometer?.setBase(SystemClock.elapsedRealtime());
+        mChronometer?.setBase(SystemClock.elapsedRealtime())
 
         super.onCreate()
     }
