@@ -4,9 +4,9 @@ public class WildCardTest {
 
     public static void main(String[] args) {
 
-        TwoD twoDs[] = {new TwoD(2,2),new TwoD(22,22)};
-        ThreeD threeDs[] = {new ThreeD(3,3,3),new ThreeD(33,33,33)};
-        FourD fourDs[] = {new FourD(4,4,4,4),new FourD(44,44,44,44)};
+        TwoD[] twoDs = {new TwoD(2,2),new TwoD(22,22)};
+        ThreeD[] threeDs = {new ThreeD(3,3,3),new ThreeD(33,33,33)};
+        FourD[] fourDs = {new FourD(4,4,4,4),new FourD(44,44,44,44)};
 
         Coordinates<TwoD> twoDCoordinates = new Coordinates<>(twoDs);
         Coordinates<ThreeD> threeDCoordinates = new Coordinates<>(threeDs);
@@ -26,21 +26,21 @@ public class WildCardTest {
 
     }
 
-    static void showXY(Coordinates<?> c){
+    private static void showXY(Coordinates<?> c){
         System.out.println("X Y Coordinates:");
         for (int i = 0; i < c.cords.length ; i++) {
             System.out.println(c.cords[i].x + ", " + c.cords[i].y);
         }
     }
 
-    static void showXYZ(Coordinates<? extends ThreeD> c){
+    private static void showXYZ(Coordinates<? extends ThreeD> c){
         System.out.println("X Y Coordinates:");
         for (int i = 0; i < c.cords.length ; i++) {
             System.out.println(c.cords[i].x + ", " + c.cords[i].y +", "+ c.cords[i].z);
         }
     }
 
-    static void showAll(Coordinates<? extends FourD> c){
+    private static void showAll(Coordinates<? extends FourD> c){
         System.out.println("X Y Coordinates:");
         for (int i = 0; i < c.cords.length ; i++) {
             System.out.println(c.cords[i].x + ", " + c.cords[i].y + ", "+ c.cords[i].z +", "+ c.cords[i].t);
